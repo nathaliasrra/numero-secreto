@@ -2,15 +2,18 @@
 alert("Boas vindas ao jogo do número secreto");
 
 /*Let - Cria uma váriavel que guarda um valor dentro dela (Os nomes da váriavel devem ser atribuidos de acordo com a sua utilidade) */
-let numeroSecreto = 5;
+let numeroMaximo = 10;
+//o parseInt() vai tranformar o número aleatório gerado pelo Math.random() em numéro inteiro. O * 10 significa que ele passará a vírgula para a direita e contará até 9, por tanto colocamos o + 1 para incluir o 10;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1); 
 let chute; //o chute vai ser o valor que guardará o que será digitado pelo usuário
 let tentativas = 1; // a variável tentativa vai guardar quantas vezes o usuário demorou para acertar o número secreto
+
 
 //while() - O while serve para executar um bloco de código não for igual ao número secreto (false) ele executará um bloco de código
 while(chute != numeroSecreto) {
 
     /*Prompt() - O prompt é um pop-up que permite a escrita dentro de uma caixa de texto. Nesse caso o valor escrito no prompt será guardado dentro da váriavel "chute" */
-   chute = prompt("Escolha um número entre 1 e 10");
+   chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}`);
 
    /*If() - É uma condicional que permite a comparação de dois ou mais valores. O primero bloco permite que execute caso a comparação seja verdade (true), caso seja falso (false) ele executará o bloco do else */
 
