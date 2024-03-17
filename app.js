@@ -7,3 +7,7 @@ let numeroSecreto = 5;
 /*Prompt() - O prompt é um pop-up que permite a escrita dentro de uma caixa de texto. Nesse caso o valor escrito no prompt será guardado dentro da váriavel "chute" */
 let chute = prompt("Escolha um número entre 1 e 10");
 
+if(chute == numeroSecreto) {
+    console.log("Você acertou, adivinhou o número secreto!");
+}
+
