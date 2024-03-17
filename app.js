@@ -14,8 +14,13 @@ if(chute == numeroSecreto) { //se o chute for igual ao numeroSecerto
     /*Console.log() - É uma função utilizada para executar testes rápidos, evitando quebrar o próprio código caso nao dê certo 
     O console fica localizado no inspecionar do navegador apertando o botão direito do mouse*/
 
-    alert(`Você acertou, adivinhou o número secreto! ${numeroSecreto}`); //exiba isso
+    alert(`Você acertou, adivinhou o número secreto! (${numeroSecreto})`); //exiba isso
+
 } else { //se não for igual
-    alert("Você errou! :/"); //exiba isso
+    if(chute > numeroSecreto) {
+        alert("O número secreto é menor")
+    } else {
+        alert("O número secreto é maior")
+    }
 }
 
